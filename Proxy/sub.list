@@ -1,3 +1,11 @@
+[General]
+loglevel = notify
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+#DNS设置或根据自己网络情况进行相应设置
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+dns-server = 119.29.29.29,223.5.5.5
+
 [Proxy]
 DIRECT = direct
 🇨🇳 中国浙江杭州 移动01 = vmess, 36.137.235.221, 45015, username=77aed262-2b64-4ca7-9feb-fc8a9a9cd655, tls=false, vmess-aead=true
@@ -68,3 +76,21 @@ DIRECT = direct
 🛑 全球拦截 = select,REJECT,DIRECT
 🍃 应用净化 = select,REJECT,DIRECT
 🐟 漏网之鱼 = select,🚀 节点选择,🎯 全球直连,♻️ 自动选择,🇨🇳 中国浙江杭州 移动01,🇨🇳 中国浙江杭州 移动02,🇺🇲 美国-圣荷西01,🇳🇱 荷兰-阿姆斯特丹02,🇨🇳 中国浙江杭州 移动03,🇨🇳 中国浙江杭州 移动04,🇨🇳 TW台湾02\r\r\r\r,🇨🇳 中国浙江杭州 移动05,🇨🇳 中国广东广州 移动06,🇳🇱 荷兰-阿姆斯特丹04,🇺🇲 美国-泛播 Cloudflare 01,🇳🇱 荷兰-阿姆斯特丹06,🇺🇲 美国-洛杉矶01,🇸🇬 新加坡02,🇺🇲 美国-佛罗里达迈阿密 Cogent 02\r\r\r,🇯🇵 JP日本02\r\r\r\r,🇨🇳 中国河南 移动02,🇭🇰 香港HK01,🇭🇰 香港HK02,🇭🇰 香港HK,🇸🇬 新加坡SG,🇺🇲 美国US01,🇺🇲 美国US02,🇺🇲 美国US03,🇺🇲 美国US04,🇺🇲 美国US05,🇺🇲 美国US06,🇺🇲 美国-泛播 Cloudflare 02,🇺🇲 美国-泛播 Cloudflare 03,🇨🇳 中国湖北十堰 联通01,🇨🇳 中国浙江杭州 移动07,🇨🇳 中国湖北十堰 联通02,🇨🇳 中国湖北十堰 联通03,🇨🇳 中国湖北十堰 联通04,🇨🇳 中国湖北十堰 联通06,🇨🇳 中国湖北十堰 联通07,🇨🇳 中国湖北十堰 联通08,🇨🇳 中国湖北十堰 联通09,🇨🇳 中国湖北十堰 联通10,🇺🇲 美国-泛播 Cloudflare 04,🇨🇳 中国湖北十堰 联通11,🇨🇳 中国湖北十堰 联通12,🇨🇳 中国湖北十堰 联通13,🇨🇳 中国上海上海 联通,🇨🇳 中国湖北十堰 联通14,🇺🇲 美国,🇺🇲 美国乔治亚亚特兰大01,🇨🇳 中国湖北十堰 联通15,🇺🇲 美国-泛播 Cloudflare 05,🇨🇳 中国湖北十堰 联通15 2,🇺🇲 美国-泛播 Cloudflare 06,🇺🇲 美国-泛播 Cloudflare 07,🇺🇲 美国-泛播 Cloudflare 08,🇺🇲 美国乔治亚亚特兰大02,🇨🇳 中国广东深圳 移动01
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 全球直连,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,🎯 全球直连,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list,🛑 全球拦截,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,🍃 应用净化,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,📢 谷歌FCM,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list,🎯 全球直连,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list,🎯 全球直连,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list,Ⓜ️ 微软服务,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list,🍎 苹果服务,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list,📲 电报信息,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list,🌍 国外媒体,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list,🚀 节点选择,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,🎯 全球直连,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,🎯 全球直连,update-interval=86400
+GEOIP,CN,🎯 全球直连
+FINAL,🐟 漏网之鱼
